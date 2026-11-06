@@ -1,7 +1,7 @@
 despesas = []
 
 def cadastrar_despesas(descricao, valor, categoria):
-        despesa = {"descrição": descricao, "valor": valor, "categoria:": categoria}
+        despesa = {"descrição": descricao, "valor": valor, "categoria": categoria}
         for item in despesas:
             if descricao.lower() == item['descrição'].lower():
                 return False
@@ -15,7 +15,6 @@ moto = cadastrar_despesas('Moto',641,'Manutenção')
 
 
 
-
 def listar_despesas():
     if not despesas:
         print('Lista de despesas vazia')
@@ -24,7 +23,6 @@ def listar_despesas():
         for despesa in despesas:
             print(despesa)
 
-listar_despesas()
 
 def calcular_despesas():
     total = 0
@@ -33,4 +31,10 @@ def calcular_despesas():
 
     return f'Valor total em despesas: R${total}'
 
-print(calcular_despesas())
+
+def filtrar_por_categoria(categoria):
+    for despesa in despesas:
+        if categoria.capitalize() == despesa["categoria"]:
+          print(despesa)
+
+
