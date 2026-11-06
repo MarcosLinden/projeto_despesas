@@ -13,3 +13,14 @@ mercado = cadastrar_despesas('Mercado', 500, 'Alimento')
 mercado1 = cadastrar_despesas('Mercado', 500, 'Alimento')
 
 print(mercado)
+
+
+def listar_despesas():
+    if not despesas:
+        print('Lista de despesas vazia')
+
+    else:
+        for despesa in despesas:
+            print(despesa)
+
+listar_despesas()
